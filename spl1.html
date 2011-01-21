@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <title>Find the sound pressure required for given L<sub>p</sub></title>
+  <style type="text/css">
+  h1 {
+    text-align: center;
+    font-family: Sans-Serif;
+    font-weight: bold;
+    font-size: 36px;
+    margin: 20px 0 0 0;
+    padding: 0;
+  }
+  #whole {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  table.problem {
+    font-family: Sans-Serif;
+    font-size: 24px;
+    text-align: right;
+/*    border-bottom: solid; */
+    margin: 40px;
+  }
+  </style>
+  <script>
+  function single_problem() {
+    var operator = "&times;";  //&#215;
+    var top = Math.floor(Math.random()*90 + 10);
+    var bottom = Math.floor(Math.random()*8 + 2);
+    return '<table class="problem">' +
+                   '<tr><td></td><td>' + top + ' dB</td></tr>' +
+                   '</table>';
+  }
+  </script>
+</head>
+<body>
+  <h1>Find the sound pressure required for given L<sub>p</sub></h1>
+  <table id="whole">
+    <script>
+    for (i=0; i<5; i++){
+      document.write("<tr>");
+      for (j=0; j<5; j++) {
+        document.write('<td>' + single_problem() + '</td>');
+      }
+      document.write('</tr>');
+    }
+    </script>
+  </table>
+  
+</body>
+</html>
+
